@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-image: url('/Parcial-1/assets/images/Xiaomi\ Electric\ Shaver\ S101.webp');
+    background-image: url('/parcial-deploy/assets/images/Xiaomi\ Electric\ Shaver\ S101.webp');
     background-size: cover;
     background-position: center;
     height: 100vh; 
@@ -180,7 +180,7 @@ main {
 }
 
 .specs-container {
-    background-image: url('/Parcial-1/assets/images/Xiaomi\ Electric\ Shaver\ S101\ \(1\).webp');
+    background-image: url('/parcial-deploy/assets/images/Xiaomi\ Electric\ Shaver\ S101\ \(1\).webp');
     background-size: cover;
     background-position: center;
     color: white;
