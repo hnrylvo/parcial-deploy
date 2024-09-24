@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+header {
+    background-image: url('/Parcial-1/assets/images/Xiaomi\ Electric\ Shaver\ S101.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin: 1.5em;
+    padding: 3em;
+}
+
+.header-top {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    z-index: 1000; 
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 5em;
+    width: 75px;
+    height: auto;
+    padding: 0.5em;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.topbar-right nav {
+    display: flex;
+    gap: 70px;
+}
+
+.topbar-right nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.topbar-right nav a:hover {
+    color: #f1f1f1;
+}
+
+.header-bottom {
+    height: 100%;
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8em;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    font-size: 1.7rem;
+}
+
+.title p {
+    text-align: center;
+    width: 50%;
+}
+
+.discover {
+    height: 65px;
+    width: 240px;
+    align-self: flex-start;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: 600;
+    background-color: #ff895d;
+    color: white;
+    border-radius: 3px;
+}
+
+.discover:hover{
+    background-color: white;
+    color: #ff895d;
+}
+
+main {
+    color: black;
+}
+
+.features-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding-top: 150px;
+    margin-bottom: 150px;
+}
+
+.features-container h2 {
+    color: #24527a;
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+
+.features-list {
+    margin: 1em;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    width: 90%;
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.feature {
+    width: 500px;
+    max-width: 400px;
+    min-width: 400px;
+    flex: 1 1 300px;
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: white;
+    padding: 1em;
+    text-align: center; 
+    margin: 0.5em;
+}
+
+.feature img {
+    padding: 1em;
+    margin-bottom: 1.5em;
+    width: 120px;
+    height: 120px;
+}
+
+.feature h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5em;
+    color: #407088;
+}
+
+.feature p {
+    font-size: 1.1rem;
+    margin: 1em;
+    text-align: justify;
+}
+
+.specs-container {
+    background-image: url('/Parcial-1/assets/images/Xiaomi\ Electric\ Shaver\ S101\ \(1\).webp');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100vh;
+    padding-right: 100px;
+}
+
+.specs-content, .package-content {
+    display: flex;
+    gap: 4em;
+    padding: 1em;
+    width: 1100px;
+    height: 650px;
+}
+
+.specs-content:hover, .package-content:hover {
+    cursor: pointer;
+}
+
+.specs-title {
+    font-size: 2.3rem;
+    margin-right: 1em;
+}
+
+.specs-table {
+    width: 100%;
+}
+
+.specs-table td {
+    padding: 15px 70px;
+    font-size: 1.3rem;
+}
+
+.package-content-title {
+    font-size: 2.3rem;
+    margin-right: 3em;
+}
+
+.package-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.item { 
+    padding: 15px 0px;
+    font-size: 1.3rem;
+}
+
+.package-container {
+    display: none; /* Ocultar por defecto */
+}
+
+
+.show-package {
+    display: block; /* Mostrar cuando se añada esta clase */
+}
+
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 5px;                                         
+    font-size: 1rem;
+    white-space: nowrap;
+    display: none; /* Inicialmente oculto */
+    z-index: 9999; /* Aparece por encima de otros elementos */
+    /*codigo generado por ChatGPT*/
+}
+
+.reviews-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 75vh;
+    padding-top: 150px;
+    margin: 100px auto;
+}
+
+.reviews-title {
+    color: #24527a;
+    font-size: 2.5rem;
+    margin-bottom: 2.5em;
+}
+
+.reviews-list {
+    margin: 1em;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 2em;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Añadir scroll-snap */
+    scroll-padding-left: 0; /* Asegura que el primer elemento esté completamente visible */
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 2em;
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: white;
+    max-width: 550px;
+    min-width: 400px;
+    margin: 1em;
+    scroll-snap-align: start; /* Mantiene los elementos alineados al comienzo */
+    flex-shrink: 0;
+}
+
+
+.review-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.review-header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.review {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: 300px; /* Ajusta el tamaño de cada review */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-list::-webkit-scrollbar {
+    width: 0; /* Oculta la barra de desplazamiento */
+}
+
+
+.review-content {
+    text-align: justify;
+    font-style: italic;
+}
+
+footer {
+    background-color: #0d2943;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Para adaptar el contenido en pantallas pequeñas */
+    padding: 2em 0;
+    font-size: 1em;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+footer ul li {
+    padding: 0.5em 0;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+footer ul li a:hover {
+    color: #ff895d;
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0.5em;
+    font-size: 1.1rem;
+}
+
+footer ul:last-child {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+}
+
+footer ul:last-child li a {
+    font-size: 1.3rem; /* Agranda el tamaño para los íconos de redes sociales */
+    transition: color 0.3s ease;
+}
+
+footer ul:last-child li a:hover {
+    color: #ff895d; /* Color destacado para los enlaces de redes sociales */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    footer ul:last-child {
+        justify-content: center;
+    }
+}
